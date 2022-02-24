@@ -24,5 +24,12 @@ namespace Projetcsharp
         {
             InitializeComponent();
         }
+
+        private void btnConnexion_Click(object sender, RoutedEventArgs e)
+        {
+            MedicWindow window = new MedicWindow();
+            // this.Hide();
+            window.Show();
+        }
     }
 }

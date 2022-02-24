@@ -7,6 +7,27 @@
         mc:Ignorable="d"
         Title="MedicWindow" Height="450" Width="800">
     <Grid Background="#EEEEEEEE">
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="30,0,0,60" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="270" AutoGenerateColumns="False" SelectionUnit="FullRow" Grid.ColumnSpan="2" Width="559">
+            <DataGrid.Columns>
+                <DataGridTextColumn HeaderStringFormat="" Header="Nom"/>
+                <DataGridTextColumn Header="Laboratoire"/>
+                <DataGridTextColumn Header="Aspect"/>
+                <DataGridTextColumn Header="Prix"/>
+                <DataGridTextColumn Header="Grammage"/>
+                <DataGridTextColumn Header="Nombre entités"/>
+                <DataGridTextColumn Header="Contre-indication"/>
+                <DataGridTextColumn Header="Effets secondaires"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnDeconnect" Content="Déconnexion" HorizontalAlignment="Left" Margin="50,0,0,20" VerticalAlignment="Bottom" Width="130" Height="25" Grid.Column="1"/>
+        <Image HorizontalAlignment="Right" Height="150" Margin="0,0,30,140" VerticalAlignment="Center" Width="150" Grid.Column="1"/>
+        <Button Content="Voir les avis" HorizontalAlignment="Right" Margin="0,0,16,20" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1"/>
+        <Image HorizontalAlignment="Right" Height="90" Margin="0,8,30,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Source="/logo.png"/>
+
     </Grid>
 </Window>

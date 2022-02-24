@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Hugo Avril\Source\Repos\projetCSharp\Projetcsharp\obj\Debug\net6.0-windows\
+C:\Users\Hugo Avril\source\repos\projetCSharp\Projetcsharp\obj\Debug\net6.0-windows\
 Projetcsharp
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\Hugo Avril\Source\Repos\projetCSharp\Projetcsharp\App.xaml
+C:\Users\Hugo Avril\source\repos\projetCSharp\Projetcsharp\App.xaml
 2-2059608542
 
 61610965033
 1941905061893
 MainWindow.xaml;MedicWindow.xaml;
 
-False
+True
 
