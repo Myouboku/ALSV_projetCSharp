@@ -12,13 +12,13 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="30,0,0,60" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="270" AutoGenerateColumns="False" SelectionUnit="FullRow" Grid.ColumnSpan="2" Width="559">
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="30,0,0,60" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="270" AutoGenerateColumns="False" SelectionUnit="FullRow" Grid.ColumnSpan="2">
             <DataGrid.Columns>
                 <DataGridTextColumn HeaderStringFormat="" Header="Nom"/>
                 <DataGridTextColumn Header="Laboratoire"/>
                 <DataGridTextColumn Header="Aspect"/>
                 <DataGridTextColumn Header="Prix"/>
-                <DataGridTextColumn Header="Grammage"/>
+                <DataGridTextColumn Header="Valeur" MinWidth="20" Width="45"/>
                 <DataGridTextColumn Header="Nombre entités"/>
                 <DataGridTextColumn Header="Contre-indication"/>
                 <DataGridTextColumn Header="Effets secondaires"/>
