@@ -24,9 +24,9 @@
                 <DataGridTextColumn Header="Effets secondaires"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnDeconnect" Content="Déconnexion" HorizontalAlignment="Left" Margin="50,0,0,20" VerticalAlignment="Bottom" Width="130" Height="25" Grid.Column="1"/>
+        <Button x:Name="btnDeconnect" Content="Déconnexion" HorizontalAlignment="Left" Margin="50,0,0,20" VerticalAlignment="Bottom" Width="130" Height="25" Grid.Column="1" Background="#FFD7FFF8"/>
         <Image HorizontalAlignment="Right" Height="150" Margin="0,0,30,140" VerticalAlignment="Center" Width="150" Grid.Column="1"/>
-        <Button Content="Voir les avis" HorizontalAlignment="Right" Margin="0,0,16,20" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1"/>
+        <Button Content="Voir les avis" HorizontalAlignment="Right" Margin="0,0,50,20" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1" Background="#FFD7FFF8"/>
         <Image HorizontalAlignment="Right" Height="90" Margin="0,8,30,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Source="/logo.png"/>
 
     </Grid>
