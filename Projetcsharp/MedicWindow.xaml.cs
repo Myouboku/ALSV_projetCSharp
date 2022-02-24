@@ -11,5 +11,10 @@ namespace Projetcsharp
         {
             InitializeComponent();
         }
+
+        private void btnDeconnect_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
