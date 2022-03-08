@@ -1,4 +1,6 @@
 ﻿using System.Windows;
+using System.Data.SqlClient;
+using System;
 
 namespace Projetcsharp
 {
@@ -14,9 +16,22 @@ namespace Projetcsharp
 
         private void btnConnexion_Click(object sender, RoutedEventArgs e)
         {
-            MedicWindow window = new();
-            // this.Hide();
-            window.Show();
+            try
+            {
+                string reqConnect = @"Server=localhost;Database=ALSV_BDDCSHARP;User=sa;Password=info;";
+                SqlConnection connexion;
+
+                connexion = new SqlConnection(reqConnect);
+                connexion.Open();
+                MessageBox.Show("Connexion réussie");
+                connexion.Close();
+                MedicWindow window = new();
+                window.Show();
+            }
+            catch (Exception erreur)
+            {
+                MessageBox.Show("Connexion échouée :\n\n" + erreur);
+            }
         }
     }
 }

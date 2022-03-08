@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hugo Avril\\source\\repos\\projetCSharp\\Projetcsharp\\Projetcsharp.csproj": {}
+    "C:\\Users\\Hugo Avril\\Source\\Repos\\projetCSharp\\Projetcsharp\\Projetcsharp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hugo Avril\\source\\repos\\projetCSharp\\Projetcsharp\\Projetcsharp.csproj": {
+    "C:\\Users\\Hugo Avril\\Source\\Repos\\projetCSharp\\Projetcsharp\\Projetcsharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hugo Avril\\source\\repos\\projetCSharp\\Projetcsharp\\Projetcsharp.csproj",
+        "projectUniqueName": "C:\\Users\\Hugo Avril\\Source\\Repos\\projetCSharp\\Projetcsharp\\Projetcsharp.csproj",
         "projectName": "Projetcsharp",
-        "projectPath": "C:\\Users\\Hugo Avril\\source\\repos\\projetCSharp\\Projetcsharp\\Projetcsharp.csproj",
+        "projectPath": "C:\\Users\\Hugo Avril\\Source\\Repos\\projetCSharp\\Projetcsharp\\Projetcsharp.csproj",
         "packagesPath": "C:\\Users\\Hugo Avril\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hugo Avril\\source\\repos\\projetCSharp\\Projetcsharp\\obj\\",
+        "outputPath": "C:\\Users\\Hugo Avril\\Source\\Repos\\projetCSharp\\Projetcsharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hugo Avril\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
