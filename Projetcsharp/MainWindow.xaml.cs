@@ -1,9 +1,6 @@
 ﻿using System.Windows;
 using System.Data.SqlClient;
 using System;
-using System.Diagnostics;
-using XSystem.Security.Cryptography;
-using System.Text;
 using System.Data;
 
 namespace Projetcsharp
@@ -17,37 +14,26 @@ namespace Projetcsharp
         {
             InitializeComponent();
         }
-
-        // hash les MDP en sha256
-        public static string getHashSha256(string text)
+        public void Grid_Loaded(object sender, RoutedEventArgs e)
         {
-            byte[] bytes = Encoding.UTF8.GetBytes(text);
-            SHA256Managed hashstring = new SHA256Managed();
-            byte[] hash = hashstring.ComputeHash(bytes);
-            string hashString = string.Empty;
-            foreach (byte x in hash)
-            {
-                hashString += String.Format("{0:x2}", x);
-            }
-            return hashString;
+            lblNomUser.Focus();
         }
 
-        private void btnConnexion_Click(object sender, RoutedEventArgs e)
+        public void BtnConnexion_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                // TODO: mettre au chargement du formulaire
                 string reqConnect = @"Server=localhost;Database=ALSV_BDDCSHARP;User=sa;Password=info;";
                 using SqlConnection connexion = new(reqConnect);
 
+                // exécution de la PS de vérification de Login / MDP
                 using SqlCommand command = new("PS_Verification_Login", connexion);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("UTI_MDP", lblMDP.Text); /* getHashSha256(lblMDP.Text); */
+                command.Parameters.AddWithValue("UTI_MDP", lblMDP.Password);
                 command.Parameters.AddWithValue("UTI_login", lblNomUser.Text);
                 connexion.Open();
                 var datas = command.ExecuteReader();
                 datas.Read();
-                MessageBox.Show(Convert.ToString(datas));
 
                 if (datas.GetInt32(0) == 1)
                 {

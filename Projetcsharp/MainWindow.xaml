@@ -6,14 +6,13 @@
         xmlns:local="clr-namespace:Projetcsharp"
         mc:Ignorable="d"
         Title="Connexion" Height="450" Width="800">
-    <Grid Background="#EEEEEEEE">
+    <Grid Background="#EEEEEEEE" Loaded="Grid_Loaded">
         <Label Content="Identification" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left" FontSize="24" FontWeight="Bold"/>
-        <TextBox x:Name="lblMDP" HorizontalAlignment="Center" Margin="0,70,0,40" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="30" FontSize="14"/>
-        <TextBox x:Name="lblNomUser" HorizontalAlignment="Center" Margin="0,0,0,50" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="30" TextAlignment="Left" FontSize="14"/>
+        <PasswordBox x:Name="lblMDP" HorizontalAlignment="Center" Margin="0,70,0,40" VerticalAlignment="Center" Width="200" Height="30" FontSize="14" Panel.ZIndex="1"/>
+        <TextBox x:Name="lblNomUser" HorizontalAlignment="Center" Margin="0,0,0,50" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="30" FontSize="14"/>
         <Label Content="Nom d'utilisateur :" Margin="0,0,354,50" FontSize="14" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Label Content="Mot de passe :" Margin="0,30,330,0" VerticalAlignment="Center" FontSize="14" HorizontalAlignment="Center"/>
-        <Button x:Name="btnConnexion" Content="Connexion" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Center" Height="30" Width="200" Background="#FFD7FFF8" Click="btnConnexion_Click"/>
+        <Button x:Name="btnConnexion" Content="Connexion" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Center" Height="30" Width="200" Background="#FFD7FFF8" Click="BtnConnexion_Click" Panel.ZIndex="2"/>
         <Image HorizontalAlignment="Right" Margin="0,30,30,0" VerticalAlignment="Top" Source="/logo.png" Height="90"/>
-
     </Grid>
 </Window>
