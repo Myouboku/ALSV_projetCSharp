@@ -502,19 +502,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hugo Avril\\.nuget\\packages\\": {}
+    "C:\\Users\\alexi\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hugo Avril\\Source\\Repos\\projetCSharp\\Projetcsharp\\Projetcsharp.csproj",
+      "projectUniqueName": "C:\\Users\\alexi\\ProjetCsharp\\projetCSharp\\Projetcsharp\\Projetcsharp.csproj",
       "projectName": "Projetcsharp",
-      "projectPath": "C:\\Users\\Hugo Avril\\Source\\Repos\\projetCSharp\\Projetcsharp\\Projetcsharp.csproj",
-      "packagesPath": "C:\\Users\\Hugo Avril\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hugo Avril\\Source\\Repos\\projetCSharp\\Projetcsharp\\obj\\",
+      "projectPath": "C:\\Users\\alexi\\ProjetCsharp\\projetCSharp\\Projetcsharp\\Projetcsharp.csproj",
+      "packagesPath": "C:\\Users\\alexi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alexi\\ProjetCsharp\\projetCSharp\\Projetcsharp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Hugo Avril\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alexi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -567,7 +572,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },

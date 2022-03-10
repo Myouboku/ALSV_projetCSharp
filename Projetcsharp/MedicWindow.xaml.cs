@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Data;
+using System.Data.SqlClient;
+using System.Windows;
 
 namespace Projetcsharp
 {
@@ -16,5 +18,22 @@ namespace Projetcsharp
         {
             Close();
         }
+
+        private void btnModification_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void btnAjout_Click(object sender, RoutedEventArgs e)
+        { 
+            
+        }
+
+        private void btnSupprime_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
     }
 }
