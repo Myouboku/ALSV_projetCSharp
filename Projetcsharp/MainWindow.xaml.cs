@@ -36,15 +36,20 @@ namespace Projetcsharp
         {
             try
             {
+                // TODO: mettre au chargement du formulaire
                 string reqConnect = @"Server=localhost;Database=ALSV_BDDCSHARP;User=sa;Password=info;";
-                SqlConnection connexion;
-                connexion = new SqlConnection(reqConnect);
+                using SqlConnection connexion = new(reqConnect);
+
+                using SqlCommand command = new("PS_Verification_Login", connexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("UTI_MDP", lblMDP.Text); /* getHashSha256(lblMDP.Text); */
+                command.Parameters.AddWithValue("UTI_login", lblNomUser.Text);
                 connexion.Open();
+                var datas = command.ExecuteReader();
+                datas.Read();
+                MessageBox.Show(Convert.ToString(datas));
 
-                string nomUtilisateur = lblNomUser.Text;
-                string mdp = getHashSha256(lblMDP.Text);
-
-                if (true)
+                if (datas.GetInt32(0) == 1)
                 {
                     MedicWindow window = new();
                     window.Show();
@@ -53,9 +58,6 @@ namespace Projetcsharp
                 {
                     MessageBox.Show("Identifiant ou mot de passe incorrecte");
                 }
-
-                // MessageBox.Show("Connexion réussie");
-                connexion.Close();
             }
             catch (Exception erreur2)
             {
