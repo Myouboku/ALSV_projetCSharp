@@ -10,9 +10,13 @@ namespace Projetcsharp
     /// </summary>
     public partial class MainWindow : Window
     {
+        public SqlConnection Conn { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            string reqConnect = @"Server=localhost;Database=ALSV_BDDCSHARP;User=sa;Password=info;MultipleActiveResultSets=true;";
+            Conn = new(reqConnect);
+            Conn.Open();
         }
         public void Grid_Loaded(object sender, RoutedEventArgs e)
         {
@@ -23,21 +27,20 @@ namespace Projetcsharp
         {
             try
             {
-                string reqConnect = @"Server=localhost;Database=ALSV_BDDCSHARP;User=sa;Password=info;";
-                using SqlConnection connexion = new(reqConnect);
+
 
                 // exécution de la PS de vérification de Login / MDP
-                using SqlCommand command = new("PS_Verification_Login", connexion);
+                using SqlCommand command = new("PS_Verification_Login", Conn);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("UTI_MDP", lblMDP.Password);
                 command.Parameters.AddWithValue("UTI_login", lblNomUser.Text);
-                connexion.Open();
+                
                 var datas = command.ExecuteReader();
                 datas.Read();
 
                 if (datas.GetInt32(0) == 1)
                 {
-                    MedicWindow window = new();
+                    MedicWindow window = new(Conn);
                     window.Show();
                 }
                 else
@@ -49,6 +52,7 @@ namespace Projetcsharp
             {
                 MessageBox.Show("Connexion échouée :\n\n" + erreur2);
             }
+
         }
     }
 }
