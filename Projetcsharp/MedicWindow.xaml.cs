@@ -41,5 +41,20 @@ namespace Projetcsharp
             dt.Load(data);
             DGmedoc.ItemsSource = dt.DefaultView;
         }
+        
+        private void btnModification_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void btnAjout_Click(object sender, RoutedEventArgs e)
+        { 
+            
+        }
+
+        private void btnSupprime_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
