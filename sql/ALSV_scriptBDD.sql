@@ -594,14 +594,16 @@ Create Proc PS_I_Medicament
 /*Procédure permettent l'insertion des données des médicaments dans la base de données Médicaments*/
 /*Paramètres du médicament*/
 @MED_NOM varchar(38),
-@MED_PHOTO image, @MED_PRIX real, @MED_QUANTITE int,
-@MED_NB_ENTITES smallint, @LAB_ID smallint, @ASP_ID smallint, @UNI_ID smallint
+@MED_PRIX real, @MED_QUANTITE int,
+@MED_NB_ENTITES smallint, @LAB_ID smallint, @ASP_ID smallint, @UNI_ID smallint, @CON_ID int, @EFF_ID
 AS
 Begin
 	/*Insertion des données du médicament */
 	Insert Into MEDICAMENT
-	(MED_NOM, MED_PHOTO, MED_PRIX, MED_QUANTITE, MED_NB_ENTITES, LAB_ID, ASP_ID, UNI_ID)
-	Values(@MED_NOM,@MED_PHOTO,@MED_PRIX,@MED_QUANTITE,@MED_NB_ENTITES, @LAB_ID, @ASP_ID, @UNI_ID)
+	(MED_NOM, MED_PRIX, MED_QUANTITE, MED_NB_ENTITES, LAB_ID, ASP_ID, UNI_ID, EFF_ID, CON_ID)
+	Values(@MED_NOM,@MED_PRIX,@MED_QUANTITE,@MED_NB_ENTITES, @LAB_ID, @ASP_ID, @UNI_ID, @EFF_ID, @CON_ID)
+	Insert Into COMPRENDRE
+	
 END
 go
 
