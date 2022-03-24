@@ -30,8 +30,8 @@ namespace Projetcsharp
                 // exécution de la PS de vérification de Login / MDP
                 using SqlCommand command = new("PS_Verification_Login", Conn);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("UTI_MDP", lblMDP.Password);
-                command.Parameters.AddWithValue("UTI_login", lblNomUser.Text);
+                command.Parameters.AddWithValue("PRA_MDP", lblMDP.Password);
+                command.Parameters.AddWithValue("PRA_LOGIN", lblNomUser.Text);
                 
                 var datas = command.ExecuteReader();
                 datas.Read();
