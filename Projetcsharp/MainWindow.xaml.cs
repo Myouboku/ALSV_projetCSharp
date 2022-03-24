@@ -27,8 +27,6 @@ namespace Projetcsharp
         {
             try
             {
-
-
                 // exécution de la PS de vérification de Login / MDP
                 using SqlCommand command = new("PS_Verification_Login", Conn);
                 command.CommandType = CommandType.StoredProcedure;
