@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="MedicAjoutWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="71*"/>
+            <RowDefinition Height="277.026"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="label" Content="Nom " HorizontalAlignment="Left" Height="24" Margin="48,58,0,0" VerticalAlignment="Top" Width="45"/>
+        <Label x:Name="label1" Content="prix &#xD;&#xA;" HorizontalAlignment="Left" Height="30" Margin="54,23,0,0" VerticalAlignment="Top" Width="33" Grid.Row="1"/>
+        <Label x:Name="label3" Content="Quantité" HorizontalAlignment="Left" Margin="37,116,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label x:Name="label4" Content="Nombre entité" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,66,0,0" Grid.RowSpan="2"/>
+        <Label x:Name="label5" Content="Lab ID" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label x:Name="label6" Content="Aspect ID" HorizontalAlignment="Center" Margin="0,116,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Grid.Row="1"/>
+        <TextBox x:Name="txtBoxNomMedic" HorizontalAlignment="Left" Height="24" Margin="105,58,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="135"/>
+        <TextBox x:Name="txtBoxPrix" HorizontalAlignment="Left" Margin="105,23,0,0" TextWrapping="Wrap" Text="Prix" VerticalAlignment="Top" Width="135" Height="26" TextChanged="textBox_TextChanged" Grid.Row="1"/>
+        <TextBox x:Name="txtBoxQuantite" HorizontalAlignment="Left" Margin="105,116,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Quantité" VerticalAlignment="Top" Width="135" Height="26"/>
+        <TextBox x:Name="txtBoxNbrEntite" HorizontalAlignment="Left" Height="24" Margin="449,68,0,0" TextWrapping="Wrap" Text="Nombre Entite" VerticalAlignment="Top" Width="124" TextChanged="textBox_TextChanged"/>
+        <TextBox x:Name="txtBoxLab" HorizontalAlignment="Left" Height="23" Margin="449,23,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Laboratoire" VerticalAlignment="Top" Width="124"/>
+        <TextBox x:Name="txtBoxAspect" HorizontalAlignment="Left" Height="26" Margin="444,116,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Aspect" VerticalAlignment="Top" Width="129"/>
+        <TextBox x:Name="txtBoxUnite" HorizontalAlignment="Left" Height="28" Margin="105,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Unité" VerticalAlignment="Center" Width="135"/>
+        <Label x:Name="label2" Content="Unité ID" HorizontalAlignment="Left" Height="28" Margin="44,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="54"/>
+        <Button x:Name="BtnAjout" Content="Ajouter" HorizontalAlignment="Left" Height="41" Margin="468,29,0,0" Grid.Row="2" VerticalAlignment="Top" Width="188" Click="BtnAjout_Click"/>
+
     </Grid>
 </Window>
