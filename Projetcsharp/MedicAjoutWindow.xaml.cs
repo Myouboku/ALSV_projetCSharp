@@ -47,6 +47,7 @@ namespace Projetcsharp
                 command.Parameters.AddWithValue("LAB_ID", Convert.ToInt32(txtBoxLab.Text));
                 command.Parameters.AddWithValue("ASP_ID", Convert.ToInt32(txtBoxAspect.Text));
                 command.Parameters.AddWithValue("UNI_ID", Convert.ToInt32(txtBoxUnite.Text));
+
                 var datas = command.ExecuteReader();
                 datas.Read();
 
