@@ -125,21 +125,7 @@ namespace Projetcsharp
         {
             try
             {
-                if (txtBoxNbrEntite.Text.GetType() != typeof(Int32))
-                {
-
-                    MessageBox.Show("Veuillez renseigner un nombre d'entité valide");
-                }
-                else if (txtBoxPrix.Text.GetType() != typeof(Double))
-                {
-                    MessageBox.Show("Veuillez renseigner un prix valide");
-                }
-                else if (txtBoxQuantite.Text.GetType() != typeof(Int32))
-                {
-                    MessageBox.Show("Veuillez renseigner une quantité valide");
-                }
-                else 
-                {
+             
                     using SqlCommand command = new("PS_I_Medicament", Conn);
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("MED_NOM", txtBoxNomMedic.Text);
@@ -158,7 +144,6 @@ namespace Projetcsharp
                     MedicWindow window = new(Conn);
                     window.Show();
                     Close();
-                }
 
                 
             }
