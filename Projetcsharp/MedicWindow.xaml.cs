@@ -56,7 +56,13 @@ namespace Projetcsharp
         
         private void btnModification_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (DGmedoc.SelectedItem is not DataRowView row)
+                MessageBox.Show("La ligne selectionnée est nulle", "Erreur");
+            else
+            {
+                MedicWindow window = new MedicWindow(Conn);
+                window.Show();
+            }
         }
 
         private void btnAjout_Click(object sender, RoutedEventArgs e)
@@ -89,6 +95,12 @@ namespace Projetcsharp
                 }
                 DGReload(); // recharge la tableau au clic du bouton
             }
+        }
+
+        private void btnListePraticien_Click(object sender, RoutedEventArgs e)
+        {
+            PraticienWindow window = new(Conn);
+            window.Show();
         }
     }
 }

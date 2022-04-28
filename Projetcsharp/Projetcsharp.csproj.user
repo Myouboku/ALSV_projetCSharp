@@ -2,12 +2,36 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="AjoutPraticien.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MedicModifWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MedicWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ModifPraticien.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PraticienWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="AjoutPraticien.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MedicModifWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MedicWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ModifPraticien.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PraticienWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
