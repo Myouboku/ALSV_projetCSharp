@@ -8,7 +8,7 @@
         Title="ModifPraticien" Height="450" Width="800">
     <Grid>
         <Label Content="Nom&#xD;&#xA;" HorizontalAlignment="Left" Margin="76,54,0,0" VerticalAlignment="Top" Height="28" Width="67"/>
-        <TextBox x:Name="txtboxNom" HorizontalAlignment="Left" Margin="135,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtboxNom" HorizontalAlignment="Left" Margin="135,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
         <Label Content="Prénom" HorizontalAlignment="Left" Margin="58,125,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtboxPrenom" HorizontalAlignment="Left" Margin="135,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Adresse :" HorizontalAlignment="Left" Margin="122,183,0,0" VerticalAlignment="Top"/>

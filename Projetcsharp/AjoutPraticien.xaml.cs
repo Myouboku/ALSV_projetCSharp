@@ -32,21 +32,6 @@ namespace Projetcsharp
             cbBoxDiscipline.DisplayMemberPath = "DIS_LIBELLE";
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-            txtboxLogin.Text = txtboxNom.Text + "." + txtboxPrenom.Text;
-        }
-
-        private void txtboxPrenom_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            txtboxLogin.Text = txtboxNom.Text + "." + txtboxPrenom.Text;
-        }
-
         private void txtBoxCP_TextChanged(object sender, TextChangedEventArgs e)
         {
             var Patern = new Regex("^[0-9]*$");
@@ -55,17 +40,6 @@ namespace Projetcsharp
                 txtBoxCP.Text = txtBoxCP.Text.Substring(0, txtBoxCP.Text.Length - 1);
             }
         }
-
-
-
-        //private void txtBoxCP_TextChanged(object sender, TextChangedEventArgs e, KeyPressEventArgs KeyPressEvent)
-        //{
-        //    if (!char.IsControl(KeyPressEvent.KeyChar) && !char.IsDigit(KeyPressEvent.KeyChar))
-        //    {
-        //        KeyPressEvent.Handled = true;
-        //    }
-
-        //}
 
     }
 }
