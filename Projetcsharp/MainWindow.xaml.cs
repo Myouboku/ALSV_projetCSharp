@@ -25,16 +25,18 @@ namespace Projetcsharp
 
         public void BtnConnexion_Click(object sender, RoutedEventArgs e)
         {
+
             try
             {
                 // exécution de la PS de vérification de Login / MDP
                 using SqlCommand command = new("PS_Verification_Login", Conn);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("PRA_MDP", lblMDP.Password);
-                command.Parameters.AddWithValue("PRA_LOGIN", lblNomUser.Text);
-                
-                var datas = command.ExecuteReader();
+                command.Parameters.AddWithValue("VIS_MDP", lblMDP.Password);
+                command.Parameters.AddWithValue("VIS_LOGIN", lblNomUser.Text);
+
+                var datas = command.ExecuteReader(); 
                 datas.Read();
+
 
                 if (datas.GetInt32(0) == 1)
                 {
@@ -46,11 +48,10 @@ namespace Projetcsharp
                     MessageBox.Show("Identifiant ou mot de passe incorrecte");
                 }
             }
-            catch (Exception erreur2)
+            catch (Exception ex)
             {
-                MessageBox.Show("Connexion échouée :\n\n" + erreur2);
+                MessageBox.Show(ex.Message);
             }
-
-        }
+    }
     }
 }
