@@ -13,17 +13,22 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Margin="30,0,0,60" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="270" AutoGenerateColumns="True" SelectionUnit="FullRow" Grid.ColumnSpan="2" SelectionChanged="DataGrid_SelectionChanged" Name="DGmedoc" Width="720">
+
+        <DataGrid Margin="0,85,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="287" AutoGenerateColumns="True" SelectionUnit="FullRow" SelectionChanged="DataGrid_SelectionChanged" Name="DGmedoc" Width="700" Grid.Column="1" IsReadOnly="True">
+
             <DataGrid.Columns>
 
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="btnDeconnect" Content="Déconnexion" HorizontalAlignment="Left" Margin="50,0,0,20" VerticalAlignment="Bottom" Width="130" Height="25" Grid.Column="1" Background="#FFD7FFF8" Click="btnDeconnect_Click"/>
+
+        <Button x:Name="btnListePraticien" Content="Liste Praticien" HorizontalAlignment="Center" Margin="-10,0,0,20" VerticalAlignment="Bottom" Width="130" Height="25" Grid.Column="1" Background="#FFD7FFF8" Click="btnListePraticien_Click"/>
         <Image HorizontalAlignment="Right" Height="150" Margin="0,72,30,0" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
         <Button Content="Voir les avis" HorizontalAlignment="Right" Margin="0,0,50,20" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1" Background="#FFD7FFF8"/>
-        <Image HorizontalAlignment="Right" Height="90" Margin="0,8,30,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Source="/logo.png" Width="141"/>
-        <Button Content="Modifier Médicament" HorizontalAlignment="Right" Margin="0,0,640,354" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1" Background="#f2cf07" Click="btnModification_Click"/>
-        <Button Content="Ajouter Médicament" HorizontalAlignment="Right" Margin="0,0,270,356" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1" Background="#32cd32" Click="btnAjout_Click" />
-        <Button Content="Supprimer Médicament" HorizontalAlignment="Right" Margin="0,0,456,354" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1" Background="#a40606" Click="btnSupprime_Click" />
+        <Image HorizontalAlignment="Right" Height="90" VerticalAlignment="Top" Grid.ColumnSpan="2" Source="/logo.png" Width="141"/>
+        <Button Content="Modifier Médicament" HorizontalAlignment="Right" Margin="0,0,364,354" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1" Background="#f2cf07" Click="btnModification_Click"/>
+        <Button Content="Ajouter Médicament" HorizontalAlignment="Right" Margin="0,0,620,356" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1" Background="#32cd32" Click="btnAjout_Click" />
+        <Button Content="Supprimer Médicament" HorizontalAlignment="Right" Margin="0,0,146,354" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1" Background="#a40606" Click="btnSupprime_Click" />
+
     </Grid>
 </Window>

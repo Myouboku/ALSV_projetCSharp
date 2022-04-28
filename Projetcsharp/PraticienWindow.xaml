@@ -1,0 +1,17 @@
+﻿<Window x:Class="Projetcsharp.PraticienWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projetcsharp"
+        mc:Ignorable="d"
+        Title="PraticienWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Image HorizontalAlignment="Right" Height="90" VerticalAlignment="Top" Grid.ColumnSpan="2" Source="/logo.png" Width="141"/>
+        <DataGrid Name="DGpraticien" Margin="20,114,20,24" IsReadOnly="True" AutoGenerateColumns="True" SelectionUnit="FullRow"/>
+        <Button Content="Modifier Praticien" HorizontalAlignment="Right" Margin="0,0,386,354" VerticalAlignment="Bottom" Height="25" Width="130" Background="#f2cf07" Click="btnModificationPraticien_Click"/>
+        <Button Content="Ajouter Praticien" HorizontalAlignment="Right" Margin="0,0,620,356" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1" Background="#32cd32" Click="btnAjoutPraticien_Click" />
+        <Button Content="Supprimer Praticien" HorizontalAlignment="Right" Margin="0,0,146,354" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1" Background="#a40606" Click="btnSupprimePraticien_Click" />
+
+    </Grid>
+</Window>
