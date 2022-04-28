@@ -96,14 +96,14 @@ namespace Projetcsharp
 
         private void btnModificationPraticien_Click(object sender, RoutedEventArgs e)
         {
-            if (DGpraticien.SelectedItem is not DataRowView row)
+            if (DGpraticien.SelectedItem == null)
             {
                 MessageBox.Show("La ligne selectionnée est nulle", "Erreur");
                 
             }
             else
             {
-                ModifPraticien window = new(Conn);
+                ModifPraticien window = new(Conn, (Praticien)DGpraticien.SelectedItem);
                 window.Show();
             }
         }

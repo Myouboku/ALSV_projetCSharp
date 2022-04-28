@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Projetcsharp
 {
@@ -23,15 +12,21 @@ namespace Projetcsharp
     public partial class ModifPraticien : Window
     {
         public SqlConnection Conn { get; set; }
+        public Praticien praticien { get; set; }
 
-        public ModifPraticien(System.Data.SqlClient.SqlConnection conn)
+        public ModifPraticien(System.Data.SqlClient.SqlConnection conn, Praticien donnees)
         {
             InitializeComponent();
             Conn = conn;
             Fillcombo();
 
-
-
+            praticien = donnees;
+            txtboxNom.Text = praticien.Nom;
+            txtboxPrenom.Text = praticien.Prenom;
+            txtboxAdresse.Text = praticien.Adresse;
+            txtBoxCP.Text = praticien.CP.ToString();
+            txtBoxVille.Text = praticien.Ville;
+            cbBoxDiscipline.Text = praticien.Discipline;
         }
 
         public void Fillcombo()
@@ -46,15 +41,6 @@ namespace Projetcsharp
             cbBoxDiscipline.DisplayMemberPath = "DIS_LIBELLE";
         }
 
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-            txtboxLogin.Text = txtboxNom.Text + "." + txtboxPrenom.Text;
-        }
-
-        private void txtboxPrenom_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            txtboxLogin.Text = txtboxNom.Text + "." + txtboxPrenom.Text;
-        }
 
         private void txtBoxCP_TextChanged(object sender, TextChangedEventArgs e)
         {
