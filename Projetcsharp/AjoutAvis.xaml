@@ -14,7 +14,7 @@
         <Button Content="OK" HorizontalAlignment="Left" Margin="479,352,0,10" Width="64" Click="Button_Click"/>
         <Button Content="Annuler" HorizontalAlignment="Left" Margin="10,352,0,0" VerticalAlignment="Top" Width="64" Click="Button_Click_1"/>
         <ComboBox x:Name="cbxPraticiens" HorizontalAlignment="Left" Margin="373,16,0,0" VerticalAlignment="Top" Width="170" Text="cbxSelectionPraticien" SelectionChanged="ComboBox_SelectionChanged" Loaded="ComboBox_Loaded"/>
-        <TextBox x:Name="tbxAvis" HorizontalAlignment="Center" Height="283" Margin="0,52,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="533"/>
+        <TextBox x:Name="tbxAvis" HorizontalAlignment="Center" Height="283" Margin="0,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="533"/>
 
     </Grid>
 </Window>

@@ -81,7 +81,6 @@ namespace Projetcsharp
 
         private void btnModification_Click(object sender, RoutedEventArgs e)
         {
-            
         }
 
         private void btnAjout_Click(object sender, RoutedEventArgs e)
@@ -93,7 +92,7 @@ namespace Projetcsharp
         private void btnSupprime_Click(object sender, RoutedEventArgs e)
         {
             if (DGmedoc.SelectedItem is not DataRowView row)
-                MessageBox.Show("La ligne selectionnée est nulle", "Erreur");
+                MessageBox.Show("Veuillez selectionner une ligne", "Erreur");
             else
             {
                 var item = row.Row[0];
@@ -124,7 +123,7 @@ namespace Projetcsharp
         private void btnVoirAvis_Click(object sender, RoutedEventArgs e)
         {
             if (DGmedoc.SelectedItem is not DataRowView row)
-                MessageBox.Show("La ligne selectionnée est nulle", "Erreur");
+                MessageBox.Show("Veuillez selectionner une ligne", "Erreur");
             else
             {
                 
@@ -147,7 +146,7 @@ namespace Projetcsharp
         private void btnAjoutAvis_Click(object sender, RoutedEventArgs e)
         {
             if (DGmedoc.SelectedItem is not DataRowView row)
-                MessageBox.Show("La ligne selectionnée est nulle", "Erreur");
+                MessageBox.Show("Veuillez selectionner une ligne", "Erreur");
             else
             {
                 var item = row.Row[0];

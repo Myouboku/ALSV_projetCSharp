@@ -23,11 +23,11 @@ namespace Projetcsharp
     {
         public SqlConnection Conn { get; set; }
 
-        public object Praticiens { get; set; }
+        public object MedID { get; set; }
 
-        public int MedID { get; set; }
+        public List<Praticiens> ListPraticiens { get; set; }
 
-        public AjoutAvis(SqlConnection conn, int item)
+        public AjoutAvis(SqlConnection conn, object item)
         {
             InitializeComponent();
             Conn = conn;
@@ -43,7 +43,7 @@ namespace Projetcsharp
             };
             SqlParameter param1 = new("@AVI_TEXTE", SqlDbType.Text)
             {
-                Value = "placeholder"
+                Value = tbxAvis.Text
             };
             command.Parameters.Add(param1);
             SqlParameter param2 = new("@MED_ID", SqlDbType.SmallInt)
@@ -53,7 +53,7 @@ namespace Projetcsharp
             command.Parameters.Add(param2);
             SqlParameter param3 = new("@PRA_ID", SqlDbType.SmallInt)
             {
-                Value = userID
+                Value = ((Praticiens)cbxPraticiens.SelectedItem).ID
             };
             command.Parameters.Add(param3);
             SqlParameter param4 = new("@DATE", SqlDbType.Date)
@@ -62,6 +62,8 @@ namespace Projetcsharp
             };
             command.Parameters.Add(param4);
             command.ExecuteReader();
+
+            Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -71,7 +73,6 @@ namespace Projetcsharp
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -81,16 +82,31 @@ namespace Projetcsharp
         private void ComboBox_Loaded(object sender, RoutedEventArgs e)
         {
             var proc = "PS_Affichage_Praticien";
+
             var command = new SqlCommand(proc, Conn)
             {
                 CommandType = CommandType.StoredProcedure
             };
             SqlDataReader reader = command.ExecuteReader();
 
+            ListPraticiens = new List<Praticiens>();
             while (reader.Read())
             {
-                cbxPraticiens.Items.Add(reader.GetString(1) + " " + reader.GetString(2));
+                try
+                {
+                    ListPraticiens.Add(new Praticiens
+                    {
+                        ID = reader.GetInt16(0),
+                        Nom = reader.GetString(1) + " " + reader.GetString(2)
+                    });
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
+            cbxPraticiens.ItemsSource = ListPraticiens;
+            cbxPraticiens.DisplayMemberPath = "Nom";
             reader.Close();
         }
     }
