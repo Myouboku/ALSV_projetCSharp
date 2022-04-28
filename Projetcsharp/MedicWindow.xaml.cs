@@ -13,6 +13,12 @@ namespace Projetcsharp
     {
         public SqlConnection Conn { get; set; }
 
+        public string username { get; set; }
+
+        public int userID { get; set; }
+
+        public string avis { get; set; }
+
         /// <summary>
         /// Charge ou recharge le tableau de données (médicaments)
         /// </summary>
@@ -33,9 +39,10 @@ namespace Projetcsharp
             DGmedoc.Columns[0].Visibility = Visibility.Hidden;
         }
 
-        public MedicWindow(SqlConnection conn)
+        public MedicWindow(SqlConnection conn, string username)
         {
             InitializeComponent();
+            this.username = username;
             Conn = conn;
         }
 
@@ -49,19 +56,38 @@ namespace Projetcsharp
 
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        public void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            DGReload(); // charge le tableeau au chargement
+            var proc = "PS_Recuperation_IdPraticien";
+            var command = new SqlCommand(proc, Conn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            SqlParameter param = new("@PRA_LOGIN", SqlDbType.VarChar)
+            {
+                Value = username
+            };
+            command.Parameters.Add(param);
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                userID = reader.GetInt16(0);
+            }
+            reader.Close();
+
+            DGReload(); // charge le tableau au chargement
         }
-        
+
         private void btnModification_Click(object sender, RoutedEventArgs e)
         {
             
         }
 
         private void btnAjout_Click(object sender, RoutedEventArgs e)
-        { 
-            
+        {
+            MedicAjoutWindow window = new();
+            window.ShowDialog();
         }
 
         private void btnSupprime_Click(object sender, RoutedEventArgs e)
@@ -88,6 +114,48 @@ namespace Projetcsharp
                     command.ExecuteReader();
                 }
                 DGReload(); // recharge la tableau au clic du bouton
+            }
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void btnVoirAvis_Click(object sender, RoutedEventArgs e)
+        {
+            if (DGmedoc.SelectedItem is not DataRowView row)
+                MessageBox.Show("La ligne selectionnée est nulle", "Erreur");
+            else
+            {
+                
+                var item = row.Row[0];
+                
+                var proc = "PS_Aff_Avis";
+                var command = new SqlCommand(proc, Conn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                SqlParameter param = new("@MED_ID", SqlDbType.SmallInt)
+                {
+                    Value = item
+                };
+                command.Parameters.Add(param);
+                var reader = command.ExecuteReader();
+            }
+        }
+
+        private void btnAjoutAvis_Click(object sender, RoutedEventArgs e)
+        {
+            if (DGmedoc.SelectedItem is not DataRowView row)
+                MessageBox.Show("La ligne selectionnée est nulle", "Erreur");
+            else
+            {
+                var item = row.Row[0];
+
+                AjoutAvis window = new(Conn, item);
+                window.ShowDialog();
+
+                DGReload(); // recharge la tableau au clic du boutton
             }
         }
     }

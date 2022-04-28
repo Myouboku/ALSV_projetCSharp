@@ -1,0 +1,20 @@
+﻿<Window x:Class="Projetcsharp.AjoutAvis"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projetcsharp"
+        mc:Ignorable="d"
+        Title="Ajout d'avis" Height="398" Width="553" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Saisir un avis sur le produit :" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="479,352,0,10" Width="64" Click="Button_Click"/>
+        <Button Content="Annuler" HorizontalAlignment="Left" Margin="10,352,0,0" VerticalAlignment="Top" Width="64" Click="Button_Click_1"/>
+        <ComboBox x:Name="cbxPraticiens" HorizontalAlignment="Left" Margin="373,16,0,0" VerticalAlignment="Top" Width="170" Text="cbxSelectionPraticien" SelectionChanged="ComboBox_SelectionChanged" Loaded="ComboBox_Loaded"/>
+        <TextBox x:Name="tbxAvis" HorizontalAlignment="Center" Height="283" Margin="0,52,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="533"/>
+
+    </Grid>
+</Window>
