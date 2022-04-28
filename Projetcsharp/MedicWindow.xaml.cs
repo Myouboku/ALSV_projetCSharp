@@ -66,8 +66,10 @@ namespace Projetcsharp
         }
 
         private void btnAjout_Click(object sender, RoutedEventArgs e)
-        { 
-            
+        {
+            MedicAjoutWindow window = new(Conn);
+            window.Show();
+
         }
 
         private void btnSupprime_Click(object sender, RoutedEventArgs e)
