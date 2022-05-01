@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -73,7 +73,7 @@ namespace Projetcsharp
         {
             //Discipline
             List<Combobox> listDis = new List<Combobox>();
-            const ProcDis = "PS_ListeDisipline";
+            const string ProcDis = "PS_ListeDisipline";
             var cmdDis = new SqlCommand(ProcDis, Conn);
             SqlDataReader drDis = cmdDis.ExecuteReader();
             while (drDis.Read())
