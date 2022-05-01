@@ -27,10 +27,4 @@
         <Button x:Name="BtnModif" Content="Modifier" HorizontalAlignment="Left" Height="62" Margin="616,322,0,0" VerticalAlignment="Top" Width="141" Click="BtnModif_Click"/>
         <Label x:Name="label8" Content="Nb entites" HorizontalAlignment="Left" Margin="325,63,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtBoxNbEntite" HorizontalAlignment="Left" Height="26" Margin="405,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101"/>
-
-
-    <Grid>
-        
-
-    </Grid>
 </Window>
