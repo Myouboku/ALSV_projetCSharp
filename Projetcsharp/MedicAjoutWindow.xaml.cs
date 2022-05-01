@@ -22,10 +22,9 @@ namespace Projetcsharp
     public partial class MedicAjoutWindow : Window
     {
         public SqlConnection Conn { get; set; }
-
-        
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            
             //Laboratoire
             List<Combobox> listLab = new List<Combobox>();
             var ProcLab = "PS_Recuperation_Laboratoires";
@@ -36,11 +35,9 @@ namespace Projetcsharp
                 listLab.Add(new Combobox { Id = (Int16)drLab["LAB_ID"],
                 Nom = (string)drLab["LAB_NOM"]
                 });
-
             } 
             comboBoxLabo.ItemsSource = listLab;
             comboBoxLabo.DisplayMemberPath = "Nom";
-
             //Aspect
             List<Combobox> listAsp = new List<Combobox>();
             var procAsp = "PS_Recuperation_Aspects";
@@ -53,7 +50,6 @@ namespace Projetcsharp
                     Id = (Int16)drAsp["ASP_ID"],
                     Nom = (string)drAsp["ASP_LIBELLE"]
                 });
-                
             }
             comboBoxAsp.ItemsSource = listAsp;
             comboBoxAsp.DisplayMemberPath = "Nom";
@@ -114,8 +110,6 @@ namespace Projetcsharp
             Conn = conn;
         }
 
-
-
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -142,10 +136,7 @@ namespace Projetcsharp
 
                     MedicWindow window = new(Conn);
                     window.Show();
-                    Close();
-
-
-                
+                    Close();                
             }
             catch(Exception erreur2)
             {
