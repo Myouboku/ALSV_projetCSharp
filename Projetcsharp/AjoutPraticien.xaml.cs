@@ -60,10 +60,8 @@ namespace Projetcsharp
                 datas.Read();
 
                 PraticienWindow window = new(Conn);
-                window.Show();
+                window.ShowDialog();
                 Close();
-
-
             }
             catch (Exception erreur2)
             {
