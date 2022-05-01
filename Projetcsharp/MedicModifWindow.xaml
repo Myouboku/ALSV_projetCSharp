@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Projetcsharp"
         mc:Ignorable="d"
         Title="MedicModifWindow" Height="450" Width="800">
+
     <Grid Loaded="WindowLoaded">
         <Label x:Name="label" Content="Nom " HorizontalAlignment="Left" Height="36" Margin="35,79,0,0" VerticalAlignment="Top" Width="43"/>
         <TextBox x:Name="txtBoxNom" HorizontalAlignment="Left" Margin="83,79,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Height="27"/>
@@ -27,6 +28,9 @@
         <Label x:Name="label8" Content="Nb entites" HorizontalAlignment="Left" Margin="325,63,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtBoxNbEntite" HorizontalAlignment="Left" Height="26" Margin="405,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101"/>
 
+
+    <Grid>
+        
 
     </Grid>
 </Window>

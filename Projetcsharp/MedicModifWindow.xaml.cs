@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+
 using System.Data;
 using System.Data.SqlClient;
+
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -170,6 +172,7 @@ namespace Projetcsharp
             {
                 MessageBox.Show("Connexion échouée :\n\n" + erreur2);
             }
+
 
         }
     }

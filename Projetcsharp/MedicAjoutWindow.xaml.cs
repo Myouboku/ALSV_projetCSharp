@@ -125,7 +125,6 @@ namespace Projetcsharp
         {
             try
             {
-                
                     using SqlCommand command = new("PS_I_Medicament", Conn);
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("MED_NOM", txtBoxNomMedic.Text);
@@ -144,6 +143,8 @@ namespace Projetcsharp
                     MedicWindow window = new(Conn);
                     window.Show();
                     Close();
+
+
                 
             }
             catch(Exception erreur2)
