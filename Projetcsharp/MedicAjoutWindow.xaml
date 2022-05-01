@@ -9,6 +9,12 @@
         Title="MedicAjoutWindow" Height="524" Width="800">
 
     <Grid Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="369*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="385*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="3*"/>
@@ -16,6 +22,7 @@
         <Label x:Name="label" Content="Nom " HorizontalAlignment="Left" Height="24" Margin="48,58,0,0" VerticalAlignment="Top" Width="45"/>
         <Label x:Name="label1" Content="prix " HorizontalAlignment="Left" Height="30" Margin="54,23,0,0" VerticalAlignment="Top" Width="33" Grid.Row="1"/>
         <Label x:Name="label3" Content="Quantité" HorizontalAlignment="Left" Margin="37,116,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+
         <Label x:Name="label4" Content="Nombre entité" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,66,0,0"/>
         <Label x:Name="label5" Content="Laboratoire&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Grid.Row="1" Height="33" Width="87"/>
         <Label x:Name="label6" Content="Aspect" HorizontalAlignment="Center" Margin="0,116,0,207" RenderTransformOrigin="0.5,0.5" Grid.Row="1"/>
@@ -23,11 +30,13 @@
         <TextBox x:Name="txtBoxPrix" HorizontalAlignment="Left" Margin="105,23,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="135" Height="26" TextChanged="textBox_TextChanged" Grid.Row="1"/>
         <TextBox x:Name="txtBoxQuantite" HorizontalAlignment="Left" Margin="105,116,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="135" Height="26"/>
         <TextBox x:Name="txtBoxNbrEntite" HorizontalAlignment="Left" Height="24" Margin="449,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124" TextChanged="textBox_TextChanged"/>
+
         <Label x:Name="label2" Content="Unité " HorizontalAlignment="Left" Height="28" Margin="44,229,0,0" Grid.Row="1" VerticalAlignment="Top" Width="54"/>
-        <Button x:Name="BtnAjout" Content="Ajouter" HorizontalAlignment="Left" Height="41" Margin="508,270,0,0" Grid.Row="1" VerticalAlignment="Top" Width="188" Click="BtnAjout_Click"/>
-        <ComboBox x:Name="comboBoxLabo" HorizontalAlignment="Left" Margin="451,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" />
-        <ComboBox x:Name="comboBoxAsp" HorizontalAlignment="Left" Margin="449,116,0,0" Grid.Row="1" VerticalAlignment="Top" Width="124"/>
+        <Button x:Name="BtnAjout" Content="Ajouter" HorizontalAlignment="Left" Height="41" Margin="93,270,0,0" Grid.Row="1" VerticalAlignment="Top" Width="188" Click="BtnAjout_Click" Grid.Column="3"/>
+        <ComboBox x:Name="comboBoxLabo" HorizontalAlignment="Left" Margin="36,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Grid.Column="3" />
+        <ComboBox x:Name="comboBoxAsp" HorizontalAlignment="Left" Margin="34,116,0,0" Grid.Row="1" VerticalAlignment="Top" Width="124" Grid.Column="3"/>
         <ComboBox x:Name="comboboxUni" HorizontalAlignment="Left" Margin="112,227,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
+
         <ComboBox x:Name="comboBoxEff" HorizontalAlignment="Left" Margin="449,192,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label7" Content="Eff. secondaire" HorizontalAlignment="Center" Height="29" Margin="0,190,0,0" Grid.Row="1" VerticalAlignment="Top" Width="87" RenderTransformOrigin="0.5,0.5"/>
         <ComboBox x:Name="comboBoxCont" HorizontalAlignment="Left" Height="21" Margin="660,118,0,0" Grid.Row="1" VerticalAlignment="Top" Width="114"/>
