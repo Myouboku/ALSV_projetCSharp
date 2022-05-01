@@ -70,7 +70,7 @@ namespace Projetcsharp
 
             //Aspect
             List<Combobox> listAsp = new List<Combobox>();
-            var procAsp = "PS_Recuperation_Aspects";
+            string procAsp = "PS_Recuperation_Aspects";
             var cmdAsp = new SqlCommand(procAsp, Conn);
             SqlDataReader drAsp = cmdAsp.ExecuteReader();
             while (drAsp.Read())
@@ -90,7 +90,7 @@ namespace Projetcsharp
 
             //Unité
             List<Combobox> listUni = new List<Combobox>();
-            var ProcUni = "PS_Recuperation_Unites";
+            string ProcUni = "PS_Recuperation_Unites";
             var cmdUni = new SqlCommand(ProcUni, Conn);
             SqlDataReader drUni = cmdUni.ExecuteReader();
             while (drUni.Read())
@@ -107,7 +107,7 @@ namespace Projetcsharp
 
             //Contre indication
             List<Combobox> listCont = new List<Combobox>();
-            var ProcCont = "PS_Recuperation_ContreIndications";
+            string ProcCont = "PS_Recuperation_ContreIndications";
             var cmdCont = new SqlCommand(ProcCont, Conn);
             SqlDataReader drCont = cmdCont.ExecuteReader();
             while (drCont.Read())
@@ -124,7 +124,7 @@ namespace Projetcsharp
 
             //Effet Secondaire
             List<Combobox> listEffSecon = new List<Combobox>();
-            var procEffSecon = "PS_Recuperation_EffetsSecondaires";
+            string procEffSecon = "PS_Recuperation_EffetsSecondaires";
             var cmdEffSecond = new SqlCommand(procEffSecon, Conn);
             SqlDataReader drEffSecond = cmdEffSecond.ExecuteReader();
             while (drEffSecond.Read())
