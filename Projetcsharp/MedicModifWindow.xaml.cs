@@ -51,7 +51,7 @@ namespace Projetcsharp
 
             //Laboratoire
             List<Combobox> listLab = new List<Combobox>();
-            var ProcLab = "PS_Recuperation_Laboratoires";
+            string ProcLab = "PS_Recuperation_Laboratoires";
             var cmdLab = new SqlCommand(ProcLab, Conn);
             SqlDataReader drLab = cmdLab.ExecuteReader();
             while (drLab.Read())
