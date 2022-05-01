@@ -5,6 +5,7 @@
     <Compile Update="AjoutPraticien.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+
     <Compile Update="MedicModifWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,9 +20,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+
     <Page Update="AjoutPraticien.xaml">
       <SubType>Designer</SubType>
     </Page>
+
     <Page Update="MedicModifWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
