@@ -46,7 +46,7 @@ namespace Projetcsharp
 
         private void DataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-
+            
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -57,7 +57,16 @@ namespace Projetcsharp
         private void btnModification_Click(object sender, RoutedEventArgs e)
         {
             
-        }
+            if (DGmedoc.SelectedItem is not DataRowView row)
+                MessageBox.Show("La ligne selectionnée est nulle", "Erreur");
+            else
+            {
+                var item = row.Row[0];
+                MedicModifWindow window = new(Conn, item);
+                window.Show();
+            }
+
+            }
 
         private void btnAjout_Click(object sender, RoutedEventArgs e)
         {
