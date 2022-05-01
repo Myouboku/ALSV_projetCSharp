@@ -73,7 +73,7 @@ namespace Projetcsharp
         {
             //Discipline
             List<Combobox> listDis = new List<Combobox>();
-            string ProcDis = "PS_ListeDisipline";
+            const ProcDis = "PS_ListeDisipline";
             var cmdDis = new SqlCommand(ProcDis, Conn);
             SqlDataReader drDis = cmdDis.ExecuteReader();
             while (drDis.Read())
