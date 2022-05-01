@@ -164,7 +164,7 @@ namespace Projetcsharp
                 datas.Read();
 
                 MedicWindow window = new(Conn);
-                window.Show();
+                window.ShowDialog();
                 Close();
 
             }
