@@ -58,7 +58,7 @@ namespace Projetcsharp
         {
 
             if (DGmedoc.SelectedItem is not DataRowView row)
-                MessageBox.Show("La ligne selectionnée est nulle", "Erreur");
+                MessageBox.Show("Veuillez séléctionner une ligne", "Erreur");
             else
             {
 
@@ -106,7 +106,7 @@ namespace Projetcsharp
         private void btnListePraticien_Click(object sender, RoutedEventArgs e)
         {
             PraticienWindow window = new(Conn);
-            window.Show();
+            window.ShowDialog();
         }
     }
 }
