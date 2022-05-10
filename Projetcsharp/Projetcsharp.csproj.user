@@ -2,6 +2,8 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+
+    <Compile Update="AjoutAvis.xaml.cs">
     <Compile Update="AjoutPraticien.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -20,6 +22,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+
+    <Page Update="AjoutAvis.xaml">
 
     <Page Update="AjoutPraticien.xaml">
       <SubType>Designer</SubType>

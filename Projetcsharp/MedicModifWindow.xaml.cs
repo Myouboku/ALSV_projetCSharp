@@ -48,6 +48,8 @@ namespace Projetcsharp
             txtBoxNom.Text = datas[1].ToString();
             txtBoxPrix.Text = datas["MED_PRIX"].ToString();
             textBoxQuantite.Text = datas["MED_QUANTITE"].ToString();
+            txtBoxNbEntite.Text = datas["MED_NB_ENTITES"].ToString();
+
 
             //Laboratoire
             List<Combobox> listLab = new List<Combobox>();
@@ -66,7 +68,7 @@ namespace Projetcsharp
             comboboxLab.ItemsSource = listLab;
             
             comboboxLab.DisplayMemberPath = "Nom";
-            comboboxLab.SelectedIndex = (Int16)datas["LAB_ID"] ; 
+            comboboxLab.SelectedItem = listLab.First(x=>x.Id==(Int16)datas["LAB_ID"]);
 
             //Aspect
             List<Combobox> listAsp = new List<Combobox>();
@@ -84,7 +86,7 @@ namespace Projetcsharp
             }
             comboboxAsp.ItemsSource = listAsp;
             comboboxAsp.DisplayMemberPath = "Nom";
-            comboboxAsp.SelectedIndex = (Int16)datas["ASP_ID"];
+            comboboxAsp.SelectedItem = listAsp.First(x => x.Id == (Int16)datas["ASP_ID"]);
 
 
 
@@ -103,7 +105,7 @@ namespace Projetcsharp
             }
             comboboxUni.ItemsSource = listUni;
             comboboxUni.DisplayMemberPath = "Nom";
-            comboboxUni.SelectedIndex = (Int16)datas["UNI_ID"];
+            comboboxUni.SelectedItem = listUni.First(x => x.Id == (Int16)datas["UNI_ID"]);
 
             //Contre indication
             List<Combobox> listCont = new List<Combobox>();
@@ -120,7 +122,7 @@ namespace Projetcsharp
             }
             comboboxCon.ItemsSource = listCont;
             comboboxCon.DisplayMemberPath = "Nom";
-            comboboxCon.SelectedIndex = (Int16)datas["CON_ID"];
+            comboboxCon.SelectedItem = listCont.First(x => x.Id == (Int16)datas["CON_ID"]);
 
             //Effet Secondaire
             List<Combobox> listEffSecon = new List<Combobox>();
@@ -137,7 +139,7 @@ namespace Projetcsharp
             }
             comboBoxeeffSec.ItemsSource = listEffSecon;
             comboBoxeeffSec.DisplayMemberPath = "Nom";
-            comboBoxeeffSec.SelectedIndex = (Int16)datas["EFF_ID"];
+            comboBoxeeffSec.SelectedItem = listEffSecon.First(x => x.Id == (Int16)datas["EFF_ID"]);
 
             
 
@@ -154,12 +156,12 @@ namespace Projetcsharp
                 command.Parameters.AddWithValue("MED_NOM", txtBoxNom.Text);
                 command.Parameters.AddWithValue("MED_PRIX", Convert.ToDouble(txtBoxPrix.Text));
                 command.Parameters.AddWithValue("MED_QUANTITE", Convert.ToInt32(textBoxQuantite.Text));
-                command.Parameters.AddWithValue("MED_NB_ENTITES", Convert.ToInt32(txtBoxNbEntite.Text));
                 command.Parameters.AddWithValue("ASP_ID", ((Combobox)comboboxAsp.SelectedItem).Id);
-                command.Parameters.AddWithValue("EFF_ID", ((Combobox)comboBoxeeffSec.SelectedItem).Id); 
                 command.Parameters.AddWithValue("LAB_ID", ((Combobox)comboboxLab.SelectedItem).Id);
                 command.Parameters.AddWithValue("UNI_ID", ((Combobox)comboboxUni.SelectedItem).Id);
+                command.Parameters.AddWithValue("EFF_ID", ((Combobox)comboBoxeeffSec.SelectedItem).Id);
                 command.Parameters.AddWithValue("CON_ID", ((Combobox)comboboxCon.SelectedItem).Id);
+                command.Parameters.AddWithValue("MED_NB_ENTITES", Convert.ToInt32(txtBoxNbEntite.Text));
                 var datas = command.ExecuteReader();
                 datas.Read();
 

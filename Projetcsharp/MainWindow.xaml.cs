@@ -40,8 +40,8 @@ namespace Projetcsharp
 
                 if (datas.GetInt32(0) == 1)
                 {
-                    MedicWindow window = new(Conn);
-                    window.Show();
+                    MedicWindow window = new(Conn, lblNomUser.Text);
+                    window.ShowDialog();
                 }
                 else
                 {
@@ -52,6 +52,7 @@ namespace Projetcsharp
             {
                 MessageBox.Show(ex.Message);
             }
-    }
+        }
+
     }
 }

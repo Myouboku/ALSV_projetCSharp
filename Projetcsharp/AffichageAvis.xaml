@@ -1,0 +1,17 @@
+﻿<Window x:Class="Projetcsharp.AffichageAvis"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projetcsharp"
+        mc:Ignorable="d"
+        Title="AffichageAvis" Height="450" Width="800">
+    <Grid Loaded="Grid_Loaded">
+        <Label Content="Avis du médicament" HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" VerticalAlignment="Top" Width="131" FontWeight="Normal"/>
+        <Button Content="Fermer" HorizontalAlignment="Right" Margin="0,0,15,15" VerticalAlignment="Bottom" Height="25" Width="60" Click="Button_Click"/>
+        <ListBox x:Name="ltbAvis" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,42,10,62" SelectionChanged="ListBox_SelectionChanged" Cursor="Arrow">
+            <TextBox Text="TextBox"/>
+        </ListBox>
+
+    </Grid>
+</Window>
