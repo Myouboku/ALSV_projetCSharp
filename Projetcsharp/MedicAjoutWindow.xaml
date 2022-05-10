@@ -5,8 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projetcsharp"
         mc:Ignorable="d"
-        Title="MedicAjoutWindow" Height="450" Width="800">
-    <Grid>
-        
+        Loaded="Window_Loaded"
+        Title="MedicAjoutWindow" Height="524" Width="800">
+
+    <Grid Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="369*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="385*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="label" Content="Nom " HorizontalAlignment="Left" Height="24" Margin="48,58,0,0" VerticalAlignment="Top" Width="45"/>
+        <Label x:Name="label1" Content="Prix" HorizontalAlignment="Left" Height="30" Margin="54,23,0,0" VerticalAlignment="Top" Width="33" Grid.Row="1"/>
+        <Label x:Name="label3" Content="Quantité" HorizontalAlignment="Left" Margin="37,116,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+
+        <Label x:Name="label4" Content="Nombre entité" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="271,0,0,0"/>
+        <Label x:Name="label5" Content="Laboratoire&#xD;&#xA;" HorizontalAlignment="Left" Margin="272,16,0,0" VerticalAlignment="Top" Grid.Row="1" Height="33" Width="87"/>
+        <TextBox x:Name="txtBoxNomMedic" HorizontalAlignment="Left" Height="24" Margin="98,58,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="135"/>
+        <TextBox x:Name="txtBoxPrix" HorizontalAlignment="Left" Margin="105,23,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="135" Height="26" TextChanged="textBox_TextChanged" Grid.Row="1"/>
+        <TextBox x:Name="txtBoxQuantite" HorizontalAlignment="Left" Margin="105,116,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="135" Height="26"/>
+        <TextBox x:Name="txtBoxNbrEntite" HorizontalAlignment="Left" Height="24" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="124" TextChanged="textBox_TextChanged" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+        <Label x:Name="label2" Content="Unité" HorizontalAlignment="Left" Height="28" Margin="44,229,0,0" Grid.Row="1" VerticalAlignment="Top" Width="54"/>
+        <Button x:Name="BtnAjout" Content="Ajouter" HorizontalAlignment="Left" Height="41" Margin="93,270,0,0" Grid.Row="1" VerticalAlignment="Top" Width="188" Click="BtnAjout_Click" Grid.Column="3"/>
+        <ComboBox x:Name="comboBoxLabo" HorizontalAlignment="Left" Margin="0,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Grid.Column="2" Grid.ColumnSpan="2" />
+        <ComboBox x:Name="comboBoxAsp" HorizontalAlignment="Left" Margin="365,118,0,0" Grid.Row="1" VerticalAlignment="Top" Width="124" Grid.ColumnSpan="4" Visibility="Visible"/>
+        <ComboBox x:Name="comboboxUni" HorizontalAlignment="Left" Margin="112,227,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
+
+        <ComboBox x:Name="comboBoxEff" HorizontalAlignment="Left" Margin="14,221,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Label x:Name="label7" Content="Eff. secondaire" HorizontalAlignment="Left" Height="29" Margin="271,221,0,0" Grid.Row="1" VerticalAlignment="Top" Width="87" RenderTransformOrigin="0.467,0.61"/>
+        <ComboBox x:Name="comboBoxCont" HorizontalAlignment="Left" Height="21" Margin="258,310,0,0" Grid.Row="1" VerticalAlignment="Top" Width="114" Grid.ColumnSpan="3"/>
+        <Label x:Name="label8" Content="Contre indication" HorizontalAlignment="Left" Height="24" Margin="156,307,0,0" Grid.Row="1" VerticalAlignment="Top" Width="102"/>
+        <Label x:Name="label9" Content="Aspect" HorizontalAlignment="Left" Margin="287,118,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+
     </Grid>
 </Window>

@@ -1,0 +1,31 @@
+﻿<Window x:Class="Projetcsharp.MedicModifWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projetcsharp"
+        mc:Ignorable="d"
+        Title="MedicModifWindow" Height="450" Width="800">
+
+    <Grid Loaded="WindowLoaded">
+        <Label x:Name="label" Content="Nom " HorizontalAlignment="Left" Height="36" Margin="35,79,0,0" VerticalAlignment="Top" Width="43"/>
+        <TextBox x:Name="txtBoxNom" HorizontalAlignment="Left" Margin="83,79,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Height="27"/>
+        <Label x:Name="label1" Content="Prix" HorizontalAlignment="Left" Height="28" Margin="35,154,0,0" VerticalAlignment="Top" Width="43"/>
+        <TextBox x:Name="txtBoxPrix" HorizontalAlignment="Left" Height="30" Margin="83,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label2" Content="Quantité" HorizontalAlignment="Left" Margin="22,263,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxQuantite" HorizontalAlignment="Left" Height="26" Margin="91,263,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="112"/>
+        <Label x:Name="label3" Content="Unité" HorizontalAlignment="Left" Margin="31,358,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboboxUni" HorizontalAlignment="Left" Height="26" Margin="91,358,0,0" VerticalAlignment="Top" Width="112"/>
+        <Label x:Name="label4" Content="Laboratoire" HorizontalAlignment="Left" Height="28" Margin="311,154,0,0" VerticalAlignment="Top" Width="75"/>
+        <ComboBox x:Name="comboboxLab" HorizontalAlignment="Left" Height="27" Margin="400,152,0,0" VerticalAlignment="Top" Width="121"/>
+        <Label x:Name="label5" Content="Aspect" HorizontalAlignment="Left" Height="30" Margin="325,199,0,0" VerticalAlignment="Top" Width="75"/>
+        <ComboBox x:Name="comboboxAsp" HorizontalAlignment="Left" Height="30" Margin="400,0,0,0" VerticalAlignment="Center" Width="121"/>
+        <Label x:Name="label6" Content="Eff. Secondaire" HorizontalAlignment="Left" Height="27" Margin="311,313,0,0" VerticalAlignment="Top" Width="89"/>
+        <ComboBox x:Name="comboBoxeeffSec" HorizontalAlignment="Left" Height="27" Margin="405,311,0,0" VerticalAlignment="Top" Width="121"/>
+        <Label x:Name="label7" Content="Contre Indication" HorizontalAlignment="Left" Height="30" Margin="638,113,0,0" VerticalAlignment="Top" Width="105"/>
+        <ComboBox x:Name="comboboxCon" HorizontalAlignment="Left" Height="28" Margin="638,154,0,0" VerticalAlignment="Top" Width="105"/>
+        <Button x:Name="BtnModif" Content="Modifier" HorizontalAlignment="Left" Height="62" Margin="616,322,0,0" VerticalAlignment="Top" Width="141" Click="BtnModif_Click"/>
+        <Label x:Name="label8" Content="Nb entites" HorizontalAlignment="Left" Margin="325,63,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBoxNbEntite" HorizontalAlignment="Left" Height="26" Margin="405,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101"/>
+    </Grid>
+</Window>

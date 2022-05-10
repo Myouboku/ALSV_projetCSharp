@@ -53,7 +53,7 @@ namespace Projetcsharp
 
         private void DataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-
+            
         }
 
         public void Window_Loaded(object sender, RoutedEventArgs e)
@@ -81,18 +81,32 @@ namespace Projetcsharp
 
         private void btnModification_Click(object sender, RoutedEventArgs e)
         {
+
+
+            if (DGmedoc.SelectedItem is not DataRowView row)
+                MessageBox.Show("Veuillez séléctionner une ligne", "Erreur");
+            else
+            {
+
+                var item = row.Row[0];
+                MedicModifWindow window = new(Conn, item);
+                window.Show();
+            }
         }
+
 
         private void btnAjout_Click(object sender, RoutedEventArgs e)
         {
-            MedicAjoutWindow window = new();
+            MedicAjoutWindow window = new(Conn);
             window.ShowDialog();
         }
 
         private void btnSupprime_Click(object sender, RoutedEventArgs e)
         {
             if (DGmedoc.SelectedItem is not DataRowView row)
-                MessageBox.Show("Veuillez selectionner une ligne", "Erreur");
+
+                MessageBox.Show("Veuillez séléctionner une ligne", "Erreur");
+
             else
             {
                 var item = row.Row[0];
@@ -115,6 +129,7 @@ namespace Projetcsharp
                 DGReload(); // recharge la tableau au clic du bouton
             }
         }
+
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
@@ -148,6 +163,12 @@ namespace Projetcsharp
 
                 DGReload(); // recharge la tableau au clic du boutton
             }
+
+        private void btnListePraticien_Click(object sender, RoutedEventArgs e)
+        {
+            PraticienWindow window = new(Conn);
+            window.Show();
+
         }
     }
 }
