@@ -6,19 +6,26 @@
         xmlns:local="clr-namespace:Projetcsharp"
         mc:Ignorable="d"
         Title="ModifPraticien" Height="450" Width="800">
-    <Grid>
+    <Grid Loaded="WindowsLoading">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="179*"/>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
         <Label Content="Nom&#xD;&#xA;" HorizontalAlignment="Left" Margin="76,54,0,0" VerticalAlignment="Top" Height="28" Width="67"/>
         <TextBox x:Name="txtboxNom" HorizontalAlignment="Left" Margin="135,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
         <Label Content="Prénom" HorizontalAlignment="Left" Margin="58,125,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtboxPrenom" HorizontalAlignment="Left" Margin="135,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Adresse :" HorizontalAlignment="Left" Margin="122,183,0,0" VerticalAlignment="Top"/>
-        <Label Content="Num et libelle" HorizontalAlignment="Left" Margin="19,236,0,0" VerticalAlignment="Top"/>
+        <Label Content="Adresse" HorizontalAlignment="Left" Margin="19,236,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtboxAdresse" HorizontalAlignment="Left" Margin="110,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Code Postal" HorizontalAlignment="Left" Margin="25,267,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtBoxCP" HorizontalAlignment="Left" Margin="110,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MaxLength="5" TextChanged="txtBoxCP_TextChanged"/>
         <TextBox x:Name="txtBoxVille" HorizontalAlignment="Left" Margin="110,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Ville" HorizontalAlignment="Left" Margin="45,303,0,0" VerticalAlignment="Top"/>
         <Label Content="Discipline" HorizontalAlignment="Left" Margin="294,191,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cbBoxDiscipline" HorizontalAlignment="Left" Margin="373,196,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbBoxDiscipline" HorizontalAlignment="Left" Margin="26,196,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Button x:Name="btnModifierPraticien" Content="Modifier" HorizontalAlignment="Left" Margin="345,329,0,0" VerticalAlignment="Top" Width="104" Click="btnModifierPraticien_Click" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
