@@ -126,20 +126,12 @@ namespace Projetcsharp
                 MessageBox.Show("Veuillez selectionner une ligne", "Erreur");
             else
             {
-                
                 var item = row.Row[0];
-                
-                var proc = "PS_Aff_Avis";
-                var command = new SqlCommand(proc, Conn)
-                {
-                    CommandType = CommandType.StoredProcedure
-                };
-                SqlParameter param = new("@MED_ID", SqlDbType.SmallInt)
-                {
-                    Value = item
-                };
-                command.Parameters.Add(param);
-                var reader = command.ExecuteReader();
+
+                AffichageAvis window = new(Conn, item);
+                window.ShowDialog();
+
+                DGReload(); // recharge la tableau au clic du boutton
             }
         }
 
