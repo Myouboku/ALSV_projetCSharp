@@ -81,10 +81,9 @@ namespace Projetcsharp
                 window.ShowDialog();
                 Close();
             }
-            catch (Exception)
+            catch (Exception erreur3)
             {
-
-                throw;
+                MessageBox.Show("Connexion échouée :\n\n" + erreur3);
             }
         }
     }
