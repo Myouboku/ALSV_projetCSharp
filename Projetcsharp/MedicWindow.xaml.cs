@@ -108,5 +108,24 @@ namespace Projetcsharp
             PraticienWindow window = new(Conn);
             window.Show();
         }
+
+        private void btnAjouterAvis_Click(object sender, RoutedEventArgs e)
+        {
+            AjoutAvisWindow window = new(Conn);
+            window.Show();
+        }
+
+        private void btnListAvis_Click(object sender, RoutedEventArgs e)
+        {
+            if (DGmedoc.SelectedItem is not DataRowView row)
+                MessageBox.Show("Veuillez séléctionner une ligne", "Erreur");
+            else
+            {
+
+                var item = row.Row[0];
+                ListAvisWindow window = new(Conn, item);
+                window.Show();
+            }
+        }
     }
 }
