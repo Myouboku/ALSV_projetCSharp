@@ -9,12 +9,13 @@
     <Grid Background="#EEEEEEEE">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="157*"/>
+            <ColumnDefinition Width="243*"/>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
 
-        <DataGrid Margin="0,85,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="287" AutoGenerateColumns="True" SelectionUnit="FullRow" SelectionChanged="DataGrid_SelectionChanged" Name="DGmedoc" Width="700" Grid.Column="1" IsReadOnly="True">
+        <DataGrid Margin="50,85,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="287" AutoGenerateColumns="True" SelectionUnit="FullRow" SelectionChanged="DataGrid_SelectionChanged" Name="DGmedoc" Width="700" Grid.Column="1" IsReadOnly="True" Grid.ColumnSpan="2">
 
             <DataGrid.Columns>
 
@@ -22,13 +23,14 @@
         </DataGrid>
         <Button x:Name="btnDeconnect" Content="Déconnexion" HorizontalAlignment="Left" Margin="50,0,0,20" VerticalAlignment="Bottom" Width="130" Height="25" Grid.Column="1" Background="#FFD7FFF8" Click="btnDeconnect_Click"/>
 
-        <Button x:Name="btnListePraticien" Content="Liste Praticien" HorizontalAlignment="Center" Margin="-10,0,0,20" VerticalAlignment="Bottom" Width="130" Height="25" Grid.Column="1" Background="#FFD7FFF8" Click="btnListePraticien_Click"/>
-        <Image HorizontalAlignment="Right" Height="150" Margin="0,72,30,0" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
-        <Button Content="Voir les avis" HorizontalAlignment="Right" Margin="0,0,50,20" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1" Background="#FFD7FFF8"/>
-        <Image HorizontalAlignment="Right" Height="90" VerticalAlignment="Top" Grid.ColumnSpan="2" Source="/logo.png" Width="141"/>
-        <Button Content="Modifier Médicament" HorizontalAlignment="Right" Margin="0,0,364,354" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1" Background="#f2cf07" Click="btnModification_Click"/>
-        <Button Content="Ajouter Médicament" HorizontalAlignment="Right" Margin="0,0,620,356" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1" Background="#32cd32" Click="btnAjout_Click" />
-        <Button Content="Supprimer Médicament" HorizontalAlignment="Right" Margin="0,0,146,354" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1" Background="#a40606" Click="btnSupprime_Click" />
+        <Button x:Name="btnListePraticien" Content="Liste Praticien" HorizontalAlignment="Left" Margin="241,0,0,20" VerticalAlignment="Bottom" Width="130" Height="25" Grid.Column="1" Background="#FFD7FFF8" Click="btnListePraticien_Click" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Right" Height="150" Margin="0,72,30,0" VerticalAlignment="Top" Width="150" Grid.Column="2"/>
+        <Button x:Name="btnListAvis" Content="Voir les avis" HorizontalAlignment="Right" Margin="0,0,228,20" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="2" Background="#FFD7FFF8" Click="btnListAvis_Click"/>
+        <Image HorizontalAlignment="Right" Height="90" VerticalAlignment="Top" Source="/logo.png" Width="141" Grid.Column="2"/>
+        <Button Content="Modifier Médicament" HorizontalAlignment="Right" Margin="0,0,364,354" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1" Background="#f2cf07" Click="btnModification_Click" Grid.ColumnSpan="2"/>
+        <Button Content="Ajouter Médicament" HorizontalAlignment="Right" Margin="0,0,134,356" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="1" Background="#32cd32" Click="btnAjout_Click" />
+        <Button Content="Supprimer Médicament" HorizontalAlignment="Right" Margin="0,0,146,354" VerticalAlignment="Bottom" Height="25" Width="130" Grid.Column="2" Background="#a40606" Click="btnSupprime_Click" />
+        <Button x:Name="btnAjouterAvis" Content="Ajouter Avis" HorizontalAlignment="Left" Margin="306,389,0,0" VerticalAlignment="Top" Width="130" Height="27" Click="btnAjouterAvis_Click" Grid.Column="2"/>
 
     </Grid>
 </Window>

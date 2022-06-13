@@ -1,0 +1,13 @@
+﻿<Window x:Class="Projetcsharp.ListAvisWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projetcsharp"
+        mc:Ignorable="d"
+        Title="ListAvisWindow" Height="450" Width="800">
+    <Grid Loaded="dgLoad">
+        <DataGrid x:Name="dgListAvis" HorizontalAlignment="Left" Height="348" Margin="26,29,0,0" VerticalAlignment="Top" Width="732" Loaded="dgLoad"/>
+        <Button x:Name="btnClose" Content="Fermer" HorizontalAlignment="Left" Margin="62,382,0,0" VerticalAlignment="Top" Height="41" Width="658" Click="btnClose_Click"/>
+    </Grid>
+</Window>
